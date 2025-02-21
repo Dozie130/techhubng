@@ -2,6 +2,7 @@
 import { Navbar } from "@/components/ui/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { FeaturedProducts } from "@/components/featured-products";
+import { ProductCategories } from "@/components/product-categories";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <FeaturedProducts />
+      <ProductCategories />
     </main>
   );
 };
