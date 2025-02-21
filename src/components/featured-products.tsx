@@ -41,20 +41,20 @@ const FEATURED_PRODUCTS = [
 export const FeaturedProducts = () => {
   return (
     <section 
-      className="relative py-24 overflow-hidden"
+      className="relative py-24 overflow-hidden bg-gradient-to-b from-tech-dark to-tech-dark/95"
       aria-labelledby="featured-products-title"
     >
-      {/* Background Pattern */}
+      {/* Enhanced Background Pattern */}
       <div 
-        className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(74,222,128,0.03)_50%,transparent_75%)] bg-[length:500px_500px]"
+        className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(74,222,128,0.02)_50%,transparent_75%)] bg-[length:500px_500px] animate-float opacity-50"
         aria-hidden="true"
       ></div>
 
       <div className="container relative">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 
             id="featured-products-title"
-            className="text-3xl md:text-4xl font-bold text-tech-light mb-4 animate-fadeIn [--animation-delay:200ms]"
+            className="text-3xl md:text-4xl font-bold text-tech-light mb-6 animate-fadeIn [--animation-delay:200ms]"
           >
             Featured Products
           </h2>
@@ -63,12 +63,18 @@ export const FeaturedProducts = () => {
           </p>
         </div>
         <div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeIn [--animation-delay:600ms]"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 animate-fadeIn [--animation-delay:600ms]"
           role="list"
           aria-label="Featured products grid"
         >
-          {FEATURED_PRODUCTS.map((product) => (
-            <ProductCard key={product.id} {...product} />
+          {FEATURED_PRODUCTS.map((product, index) => (
+            <div 
+              key={product.id}
+              className="animate-fadeIn"
+              style={{ animationDelay: `${(index + 3) * 200}ms` }}
+            >
+              <ProductCard {...product} />
+            </div>
           ))}
         </div>
       </div>
