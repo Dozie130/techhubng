@@ -5,11 +5,14 @@ import { FeaturedProducts } from "@/components/featured-products";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-tech-dark text-tech-light">
+    <main 
+      className="min-h-screen bg-tech-dark text-tech-light"
+      role="main"
+    >
       <Navbar />
       <HeroSection />
       <FeaturedProducts />
-    </div>
+    </main>
   );
 };
 
