@@ -1,5 +1,6 @@
 
 import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 import { ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
